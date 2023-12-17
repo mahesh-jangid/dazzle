@@ -28,7 +28,7 @@ function CreateChatRoom({ setCreateChatRoom }: Props) {
     <div className="fixed top-0 left-0 z-50 flex h-[100vh] w-full items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]">
       <div className="w-[400px] rounded-xl bg-white dark:border dark:border-stone-300 dark:bg-[#000000]">
         <div className="flex items-center justify-between border-b border-stone-300 p-3 dark:border-stone-700">
-          <button onClick={() => setCreateChatRoom(false)} type="button">
+          <button aria-label='button' onClick={() => setCreateChatRoom(false)} type="button">
             <CloseBtnSVG
               lightColor="#262626"
               darkColor="#f1f5f9"
@@ -79,6 +79,7 @@ function CreateChatRoom({ setCreateChatRoom }: Props) {
             </label>
           </form>
           <button
+          aria-label='button'
             className="mr-5"
             type="button"
             onClick={(e) =>
@@ -116,7 +117,7 @@ function CreateChatRoom({ setCreateChatRoom }: Props) {
                   )}
                 </div>
                 <p className="mr-auto ml-3">{searchedUserData?.username}</p>
-                <button onClick={() => setTicked(!ticked)} type="button">
+                <button onClick={() => setTicked(!ticked)} type="button" aria-label='button'>
                   <SelectionBtnSVG ticked={ticked} />
                 </button>
               </div>

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAtom } from 'jotai';
 import Image from 'next/future/image';
 import Link from 'next/link';
@@ -23,7 +23,10 @@ export default function HeartNotificationsWindow() {
   const postInfo = useHandleOpenHeartPost({ heartDetail, setPostPopUp });
 
   useScrollToLatestMessage({ messages: null, latestMessageRef: upperRef });
-
+  useEffect(() => {
+    // This code will be executed when the component has mounted
+    setLoading(false);
+  }, []);
   if (!userNotifications?.heartNotifications) {
     return <LoadingHeartPosts />;
   }
@@ -57,7 +60,6 @@ export default function HeartNotificationsWindow() {
               className={`${
                 darkMode ? 'scrollbarDark' : 'scrollbarLight'
               }  scrollbar flex max-h-[300px] flex-col-reverse overflow-y-auto`}
-              onLoad={() => setLoading(false)}
             >
               {userNotifications?.heartNotifications!.map((details, index) => (
                 <div

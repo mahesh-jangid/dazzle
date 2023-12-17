@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/future/image';
 import { useRouter } from 'next/router';
 import { useAtom } from 'jotai';
@@ -34,7 +34,10 @@ const Profile: NextPage = () => {
   const [userPorfileLoading, setUserPorfileLoading] = useAtom(
     atoms.userPorfileLoading
   );
-
+  useEffect(() => {
+    // This code will be executed when the component has mounted
+    setUserPorfileLoading(false);
+  }, []);
   const [addPhoto, setAddPhoto] = React.useState(false);
   const [unfollow, setUnfollow] = React.useState(false);
   const [showFollowing, setShowFollowing] = React.useState(false);
@@ -138,6 +141,7 @@ const Profile: NextPage = () => {
                     ) ? (
                       <div>
                         <button
+                        aria-label='button'
                           type="button"
                           onClick={() => {
                             setUnfollow(true);
@@ -221,7 +225,6 @@ const Profile: NextPage = () => {
             className={`${
               userPorfileLoading ? 'fixed opacity-0' : ''
             } grid max-w-[935px] grid-cols-3 gap-1 pb-10 sm:gap-4`}
-            onLoad={() => setUserPorfileLoading(false)}
           >
             {profilePosts.slice(0, -1).map((postInformation, index) => (
               <UserPost

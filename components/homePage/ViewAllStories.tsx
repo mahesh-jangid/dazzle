@@ -45,6 +45,7 @@ function ViewAllStories({
   return (
     <div className="fixed top-0 left-0 z-[100] h-screen w-full overflow-hidden overflow-y-scroll bg-[#1a1a1a]">
       <button
+      aria-label='button'
         className="absolute top-4 left-4 z-[100]"
         type="button"
         onClick={() => {
@@ -53,10 +54,11 @@ function ViewAllStories({
         }}
       >
         <div className="h-auto w-[103px]">
-          <InstagramSVG disableDarkMode white />
+          <InstagramSVG  />
         </div>
       </button>
       <button
+      aria-label='button'
         className="absolute top-6 right-6 z-[100]"
         type="button"
         onClick={() => {
@@ -80,6 +82,7 @@ function ViewAllStories({
             <div className="group relative flex">
               {storyUsername === userName ? (
                 <button
+                aria-label='button'
                   className={
                     positionIndex !== 0
                       ? 'absolute top-[50%] left-[-3vw] z-10'
@@ -196,6 +199,7 @@ function ViewAllStories({
               </div>
               {storyUsername === userName ? (
                 <button
+                aria-label='button'
                   className={
                     positionIndex < storiesArray.length - 1
                       ? 'absolute top-[50%] right-[-3vw] z-10'

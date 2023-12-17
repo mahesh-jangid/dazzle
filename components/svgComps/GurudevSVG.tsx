@@ -7,7 +7,7 @@ function GurudevSVGIcon({ page }: { page: string }) {
   const [darkMode] = useAtom(atoms.darkMode);
   const [showPopUp, setShowPopUp] = useState(false);
 
-  let interval: NodeJS.Timeout;  // Declare the interval variable outside the useEffect
+  let interval: any;  // Declare the interval variable outside the useEffect
 
   useEffect(() => {
     if (page !== 'Gurudev') {

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Image from 'next/future/image';
 import { useAtom } from 'jotai';
 import Link from 'next/link';
@@ -11,7 +12,10 @@ function UserSuggestions() {
   const [suggestionsLoading, setSuggestionsLoading] = useAtom(
     atoms.suggestionsLoading
   );
-
+  useEffect(() => {
+    // This code will be executed when the component has mounted
+    setSuggestionsLoading(false);
+  }, []);
   return (
     <div className="mt-6 hidden max-w-[320px] flex-grow lg:block">
       <div className="mt-5 flex items-center justify-between">
@@ -62,7 +66,6 @@ function UserSuggestions() {
         </div>
         <div
           className={`${suggestionsLoading ? 'fixed opacity-0' : ''}`}
-          onLoad={() => setSuggestionsLoading(false)}
         >
           {spotlightUsers.map((spotlightUserDetails) => (
             <div

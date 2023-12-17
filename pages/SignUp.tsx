@@ -36,7 +36,7 @@ const SignUp: NextPage = () => {
     return (
       <div className="flex h-[100vh] w-full items-center justify-center dark:bg-[#131313]">
         <picture>
-          <img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" width={"40px"} height={"40px"} alt="loading" />
+          <img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" width='40px' height='40px' alt="loading" />
         </picture>
       </div>
     );
@@ -53,7 +53,7 @@ const SignUp: NextPage = () => {
         <div>
           <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white">
             <div className="h-auto w-[175px] pt-10 pb-5">
-              <InstagramSVG disableDarkMode white={false} />
+              <InstagramSVG />
             </div>
             <div className="px-10 pb-5 text-center font-semibold text-[#8e8e8e]">
               <p>Sign up to see photos and videos from your friends.</p>

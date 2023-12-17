@@ -17,7 +17,6 @@ import IndexSVG from '../svgComps/IndexSVG';
 import HomeSVG from '../svgComps/HomeSVG';
 import useHandleSignOut from '../../hooks/useHandleSignOut';
 import useHandleAvatarDropDown from '../../hooks/useHandleAvatarDropDown';
-import InstagramSVG from '../svgComps/InstagramSVG';
 import HeartNotificationsWindow from './HeartNotificationsWindow';
 import useHandleHeartDropDown from '../../hooks/useHandleHeartDropDown';
 import handleResetNewHearts from '../../util/handleResetNewHears';
@@ -109,7 +108,7 @@ function Header({ page }: { page: string }) {
               </div>
             </a>
           </Link>
-          <button onClick={() => setAddPost(true)} type="button">
+          <button onClick={() => setAddPost(true)} type="button" aria-label='button'>
             <NewPostSVG />
           </button>
           <div className="relative ml-[10px] cursor-pointer sm:ml-[22px]">

@@ -96,7 +96,7 @@ const Login: NextPage = () => {
         <div>
           <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white">
             <div className="h-auto w-[175px] py-10">
-              <InstagramSVG disableDarkMode white={false} />
+              <InstagramSVG />
             </div>
             <div className="w-full px-5 sm:px-10">
               <form

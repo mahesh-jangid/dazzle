@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
+import React, { useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useAtom } from 'jotai';
@@ -17,7 +17,11 @@ const Home: NextPage = () => {
   const [followingArrayStatus] = useAtom(atoms.followingArrayStatus);
   const [postsLoading, setPostsLoading] = useAtom(atoms.postsLoading);
   
+  useEffect(() => {
 
+    // This code will be executed when the component has mounted
+    setPostsLoading(false);
+  }, []);
   if (!userStatus) {
     return <LoadingPage checkingUserRoute={false} />;
   }
@@ -35,7 +39,6 @@ const Home: NextPage = () => {
           <StoryBoard />
           <div
             className={`${postsLoading ? 'fixed opacity-0' : ''}`}
-            onLoad={() => setPostsLoading(false)}
           >
             {followingArrayStatus ? (
               <div>

@@ -43,6 +43,7 @@ function AddNewPost({
       ) : (
         <div>
           <button
+          aria-label='button'
             className="fixed top-5 right-5"
             type="button"
             onClick={() => setAddPost(false)}
@@ -58,6 +59,7 @@ function AddNewPost({
               <div>
                 <div className="flex items-center justify-between px-4">
                   <button
+                  aria-label='button'
                     onClick={() => {
                       setSelectedImage(undefined);
                       setImageSelected(false);

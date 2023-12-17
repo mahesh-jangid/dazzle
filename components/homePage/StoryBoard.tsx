@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAtom } from 'jotai';
 import AddStory from './AddStory';
 import StoryBoardTag from './StoryBoardTag';
@@ -9,7 +9,11 @@ function StoryBoard() {
   const [darkMode] = useAtom(atoms.darkMode);
   const [storiesArray] = useAtom(atoms.storiesArray);
   const [storiesLoading, setStoriesLoading] = useAtom(atoms.storiesLoading);
+  useEffect(() => {
 
+    // This code will be executed when the component has mounted
+    setStoriesLoading(false);
+  }, []);
   const circles = [1, 2, 3, 4, 5];
 
   return (
@@ -21,9 +25,7 @@ function StoryBoard() {
       <AddStory />
       <div
         className={`${storiesLoading ? 'fixed opacity-0' : ''} flex`}
-        onLoad={() => {
-          setStoriesLoading(false);
-        }}
+       
       >
         {storiesArray.map((username, index) => (
           <StoryBoardTag username={username} key={username + index} />

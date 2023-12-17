@@ -1,28 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/header/Header';
 import Head from 'next/head';
+import Header from '../components/header/Header';
 
-const Gurudev = ({ page }: { page: string }) => {
+
+const Gurudev = () => {
   const [inputValue, setInputValue] = useState('');
   const [isSending, setIsSending] = useState(false);
   const [messages, setMessages] = useState([
     { type: 'rchat', text: 'Hellow, Gurudev Narsi is here !' },
   ]);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-
-  let settimeout: NodeJS.Timeout | null = null;
-  let setnewtimeout: NodeJS.Timeout | null = null;
-
+  const settimeout: null = null;
+  const setnewtimeout:  null = null;
   const appendTypingAnimation = () => {
     // Clear existing "Typing..." messages
     setMessages((prevMessages) => prevMessages.filter(msg => msg.text !== 'Typing...'));
@@ -33,7 +21,6 @@ const Gurudev = ({ page }: { page: string }) => {
       { type: 'rchat', text: 'Typing...' },
     ]);
   };
-
   const handleSendMessage = async () => {
     if (inputValue.trim() !== '') {
       setIsSending(true);
@@ -95,6 +82,23 @@ const Gurudev = ({ page }: { page: string }) => {
     setInputValue('');
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSendMessage();
+    }
+  };
+
+
+
+
+
+
+
   useEffect(() => {
     if (messages) {
       if (settimeout) {
@@ -117,18 +121,18 @@ const Gurudev = ({ page }: { page: string }) => {
           href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
           rel="stylesheet"
         />
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        {/* <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> */}
       </Head>
       <Header page="Gurudev" />
       <main>
         <div className="topper">
-          <div className="icon"></div>
+          {/* <div className="icon"></div> */}
           <div className="name" id='dazzle' >Dazzlone</div>
         </div>
         <div className="msgs_cont">
           <ul id="list_cont">
-            {messages.map((message, index) => (
-              <li key={index} className={message.type}>
+            {messages.map((message) => (
+              <li key={message.type} className={message.type}>
                 {message.text}
               </li>
             ))}
@@ -145,6 +149,7 @@ const Gurudev = ({ page }: { page: string }) => {
               onKeyPress={handleKeyPress}
             />
             <button
+            type='button'
               className="send-btn"
               onClick={handleSendMessage}
               disabled={isSending}
@@ -154,7 +159,7 @@ const Gurudev = ({ page }: { page: string }) => {
           </div>
         </div>
       </main>
-      <style jsx>{`
+      <style>{`
         .name {
           font-size: 36px;
         }

@@ -1,6 +1,5 @@
 function SearchBtnSVG({ heightWidth }: { heightWidth: string }) {
   return (
-    <>
      <svg
       className="cursor-pointer"
       aria-label="Search"
@@ -30,7 +29,6 @@ function SearchBtnSVG({ heightWidth }: { heightWidth: string }) {
         y2="22"
       />
     </svg>
-    </>
    
   );
 }

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-array-index-key */
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { NextPage } from 'next';
 import ChatRoom from '../components/InboxPage/ChatRoom';
@@ -22,7 +22,10 @@ const Inbox: NextPage = () => {
 
   const [activeChat, setActiveChat] = React.useState('');
   const [createChatRoom, setCreateChatRoom] = React.useState(false);
-
+  useEffect(() => {
+    // This code will be executed when the component has mounted
+    setChatRoomLoading(false);
+  }, []);
   if (!userStatus) {
     return <LoadingPage checkingUserRoute={false} />;
   }
@@ -44,6 +47,7 @@ const Inbox: NextPage = () => {
         <div className="flex h-[60px] w-[130px] items-center border-b border-stone-300 dark:border-stone-700 md:w-[350px] md:px-5">
           <h1 className="mx-auto">{userDetails.displayName}</h1>
           <button
+          aria-label='button'
             onClick={() => setCreateChatRoom(!createChatRoom)}
             type="button"
           >
@@ -58,7 +62,6 @@ const Inbox: NextPage = () => {
         <div className="h-[calc(100%-60px)] w-[130px] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]">
           <div
             className={chatRoomLoading ? 'fixed opacity-0' : ''}
-            onLoad={() => setChatRoomLoading(false)}
           >
             {userNotifications?.chatRoomIds?.map((chatRoomId, index) => (
               <div
@@ -70,6 +73,7 @@ const Inbox: NextPage = () => {
                     chatRoomId,
                   });
                 }}
+                aria-label='button'
                 role="button"
                 tabIndex={0}
               >

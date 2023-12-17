@@ -38,6 +38,7 @@ function UnfollowUser({
       }}
     >
       <div
+      aria-label='button'
         className="fixed top-10 right-10"
         role="button"
         tabIndex={0}

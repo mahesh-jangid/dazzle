@@ -130,6 +130,7 @@ const HomePagePost = ({ username, index }: Props) => {
                   </button>
                 ) : (
                   <button
+                  aria-label='button'
                     id="like"
                     type="button"
                     onClick={(e) =>
@@ -149,6 +150,7 @@ const HomePagePost = ({ username, index }: Props) => {
                   </button>
                 )}
                 <button
+                aria-label='button'
                   type="button"
                   className="h-6 w-6 cursor-pointer"
                   onClick={() => {

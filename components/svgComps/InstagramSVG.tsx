@@ -1,17 +1,8 @@
-import { useAtom } from 'jotai';
-import atoms from '../../util/atoms';
 
-function InstagramSVG({
-  disableDarkMode,
-  white,
-}: {
-  disableDarkMode: boolean;
-  white: boolean;
-}) {
-  const [darkMode] = useAtom(atoms.darkMode);
+function InstagramSVG() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382 40" width="400" height="40">
-    <text x="10" y="30" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#06c2b8">
+    <text x="10" y="30"  fill="#06c2b8">
       <animate attributeName="opacity" dur="2s" values="0;1;0" repeatCount="indefinite" />
       <tspan dy="0">D<animate attributeName="opacity" dur="2s" begin="0.2s" values="0;1;0" repeatCount="indefinite" /></tspan>
       <tspan dy="0">a<animate attributeName="opacity" dur="2s" begin="0.4s" values="0;1;0" repeatCount="indefinite" /></tspan>

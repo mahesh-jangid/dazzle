@@ -35,6 +35,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
   return (
     <div className="fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-[#000000a4]">
       <div
+      aria-label='button'
         className="fixed top-10 right-10"
         role="button"
         tabIndex={0}
@@ -146,6 +147,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                   postInformation.postID
                 ) ? (
                   <button
+                  aria-label='button'
                     id="unlike"
                     type="button"
                     onClick={(e) =>
@@ -165,6 +167,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                   </button>
                 ) : (
                   <button
+                  aria-label='button'
                     id="like"
                     type="button"
                     onClick={(e) =>

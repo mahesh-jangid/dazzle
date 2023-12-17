@@ -106,7 +106,7 @@ const Explore: NextPage = () => {
         <div className="flex flex-col justify-center pt-5 font-semibold">
           <p className="mx-auto">Explore more users</p>
           <button
-          aria-label="button"
+          aria-label='button'
             className="group mx-auto px-8 pb-8 pt-4"
             type="button"
             onClick={() => setRequestMoreUsers(!requestMoreUsers)}

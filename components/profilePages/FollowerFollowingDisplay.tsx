@@ -37,6 +37,7 @@ export default function FollowerFollowingDisplay({
         Posts
       </p>
       <button
+      aria-label='button'
         id="followingFollowerDropDown"
         className="relative mx-auto flex items-center sm:mx-0"
         type="button"
@@ -57,6 +58,7 @@ export default function FollowerFollowingDisplay({
         />
       </button>
       <button
+      aria-label='button'
         id="followingFollowerDropDown"
         className="relative mx-auto flex items-center sm:mx-0"
         type="button"
