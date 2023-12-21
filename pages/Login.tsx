@@ -36,7 +36,7 @@ const Login: NextPage = () => {
         <meta name="description" content="Instagram Clone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
-      <div className="flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
+      <div className="flex items-center justify-center bg-[#fafafa] width">
         <div>
           <div className="relative hidden h-[590px] overflow-hidden lg:block">
             <Image
@@ -94,7 +94,7 @@ const Login: NextPage = () => {
           </div>
         </div>
         <div>
-          <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white">
+          <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white pwidth">
             <div className="h-auto w-[175px] py-10">
               <InstagramSVG />
             </div>

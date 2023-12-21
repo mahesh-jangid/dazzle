@@ -8,7 +8,10 @@ body {
   margin: 0;
 }
 
-
+.width{
+  width: 195%;
+  height: 77%;
+}
 
 .scrollbar {
   scrollbar-width: thin;
