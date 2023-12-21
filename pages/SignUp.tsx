@@ -51,8 +51,9 @@ const SignUp: NextPage = () => {
       </Head>
       <div className="flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
         <div>
-          <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white">
-            <div className="h-auto w-[175px] pt-10 pb-5">
+      <div className='signu'>
+      <div className="flex max-w-[500px] flex-col items-center justify-center border border-stone-300 bg-white">
+            <div className="h-auto w-[430] pt-10 pb-5">
               <InstagramSVG />
             </div>
             <div className="px-10 pb-5 text-center font-semibold text-[#8e8e8e]">
@@ -133,7 +134,7 @@ const SignUp: NextPage = () => {
               </form>
             </div>
           </div>
-          <div className="mt-2 flex max-w-[350px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
+          <div className="mt-2 flex max-w-[500px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
             <p>Have an account?</p>
             <button
               className="ml-1 font-semibold text-[#faa70c]"
@@ -143,6 +144,7 @@ const SignUp: NextPage = () => {
               Log in
             </button>
           </div>
+      </div>
         </div>
       </div>
     </div>

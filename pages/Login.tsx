@@ -36,7 +36,7 @@ const Login: NextPage = () => {
         <meta name="description" content="Instagram Clone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
-      <div className="flex items-center justify-center bg-[#fafafa] width">
+      <div >
         <div>
           <div className="relative hidden h-[590px] overflow-hidden lg:block">
             <Image
@@ -94,8 +94,9 @@ const Login: NextPage = () => {
           </div>
         </div>
         <div>
-          <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white pwidth">
-            <div className="h-auto w-[175px] py-10">
+         <div className='logu'>
+         <div className="flex max-w-[100%px] flex-col items-center justify-center border border-stone-300 bg-white">
+            <div className="h-auto w-[430px] py-10">
               <InstagramSVG />
             </div>
             <div className="w-full px-5 sm:px-10">
@@ -183,7 +184,7 @@ const Login: NextPage = () => {
               </form>
             </div>
           </div>
-          <div className="mt-2 flex max-w-[350px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
+          <div className="mt-2 flex max-w-[360px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
             <p>Do not have an account?</p>
             <button
               className="ml-1 font-semibold text-[#faa70c]"
@@ -193,6 +194,7 @@ const Login: NextPage = () => {
               Sign up
             </button>
           </div>
+         </div>
         </div>
       </div>
     </div>
