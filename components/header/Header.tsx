@@ -65,7 +65,7 @@ function Header({ page }: { page: string }) {
         </div>
         <div className="relative  sm:flex">
           <input
-            className=" w-[130px] rounded-lg bg-[#ccfcfa] py-[6px] pl-[45px] focus:outline-0 dark:bg-[#77f7dc]  lg:w-[275px]"
+            className=" searchdesign w-[130px] rounded-lg bg-[#ccfcfa] py-[6px] pl-[45px] focus:outline-0 dark:bg-[#77f7dc]  lg:w-[275px]"
             type="text"
             placeholder="Search"
             value={nameSearch}
