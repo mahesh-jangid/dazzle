@@ -7,7 +7,7 @@ const Gurudev = () => {
   const [inputValue, setInputValue] = useState('');
   const [isSending, setIsSending] = useState(false);
   const [messages, setMessages] = useState([
-    { type: 'rchat', text: 'Hellow, Gurudev Narsi is here !' },
+    { type: 'rchat', text: 'Hii dear, you can ask me any question !' },
   ]);
   const settimeout: null = null;
   const setnewtimeout:  null = null;
@@ -127,7 +127,7 @@ const Gurudev = () => {
       <main>
         <div className="topper">
           {/* <div className="icon"></div> */}
-          <div className="name" id='dazzle' >Dazzlone</div>
+          <span  className='dazzle'><img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" alt="" />Dazzlone</span>
         </div>
         <div className="msgs_cont">
           <ul id="list_cont">

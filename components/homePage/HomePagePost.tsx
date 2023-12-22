@@ -47,7 +47,7 @@ const HomePagePost = ({ username, index }: Props) => {
           ) : (
             ''
           )}
-          <div className="ml-3 flex items-center py-3">
+          <div className="homepostname ml-3 flex items-center py-3">
             <Link href={username}>
               <a>
                 {postDetails.comments[0].avatarURL ? (

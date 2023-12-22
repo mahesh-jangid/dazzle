@@ -98,7 +98,7 @@ const Profile: NextPage = () => {
           >
             {profileDetails.photoURL || profileNotifications.avatarURL ? (
               <Image
-                className="ml-4 h-20 w-20 select-none rounded-full object-cover sm:ml-0 sm:h-[150px] sm:w-[150px]"
+                className="profilephotodesign ml-4 h-20 w-20 select-none rounded-full object-cover sm:ml-0 sm:h-[150px] sm:w-[150px]"
                 src={
                   profileDetails.photoURL! || profileNotifications.avatarURL!
                 }
@@ -121,7 +121,7 @@ const Profile: NextPage = () => {
           </button>
           <div className="grow-[3]">
             <div className="flex flex-col sm:flex-row sm:items-center">
-              <h1 className="my-5 text-3xl">
+              <h1 className="usernamedesign my-5 text-3xl">
                 {profileDetails.displayName || profileNotifications.username}
               </h1>
               {nameSearch === profileDetails.displayName ? (

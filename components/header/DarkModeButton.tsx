@@ -28,11 +28,11 @@ function DarkModeButton() {
 
   return (
     <button
-      className="fixed bottom-12 right-0 p-4"
+      className="fixed bottom-20 right-0 p-4"
       onClick={() => handleDarkMode()}
       type="button"
     >
-      <div className="flex items-center gap-2 rounded-xl bg-[#bf6606] py-[2px] px-1 dark:bg-[#000000]">
+      <div className="flex items-center gap-2 rounded-xl bg-[#14d4de] py-[2px] px-1 dark:bg-[#000000]">
         <picture>
           <img
             className="h-[14px] w-[14px] select-none"
