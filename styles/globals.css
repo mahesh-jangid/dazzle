@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html,
 body {
   padding: 0;
@@ -21,6 +19,41 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #4d4d4d rgba(255, 255, 255, 0);
 }
+
+
+
+.searchdesign{
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.profilephotodesign{
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 1px 1px 20px rgb(60, 61, 61);
+}
+
+.usernamedesign{
+  font-family: sans-serif-condensed; font-weight: bold
+}
+
+.messagenamedesign{
+  font-family: sans-serif-condensed; font-weight: bold
+}
+
+.messagebordedesign{
+  height: 540px;
+}
+
+.usertotalkdesign{
+  font-family: sans-serif-condensed; font-weight: bold
+}
+
+
+
+
+
+
+
+
 
 
 /* For Chrome, EDGE, Opera, Others */
@@ -56,22 +89,6 @@ body {
 
 body {
   overflow: none;
-}
-
-
-
-.logu{
- margin-left: 15px;
-  margin-top: 40px;
-  height: 100%;
-  width: 100%;
-}
-
-.signu{
-  height: 100%;
-  width: 100%;
-  margin-top: 40px;
-  margin-left: 30px;
 }
 
 main {

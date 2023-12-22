@@ -43,9 +43,9 @@ const Inbox: NextPage = () => {
       ) : (
         <div />
       )}
-      <div className="relative mx-auto mt-4 h-[calc(100%-140px)] max-w-[935px] border border-stone-300 bg-white dark:border-stone-700 dark:bg-[#1c1c1c] sm:h-[calc(100%-90px)]">
-        <div className="flex h-[60px] w-[130px] items-center border-b border-stone-300 dark:border-stone-700 md:w-[350px] md:px-5">
-          <h1 className="mx-auto">{userDetails.displayName}</h1>
+      <div className="messagebordedesign relative mx-auto mt-0 h-[calc(100%-140px)] max-w-[100%] border border-stone-300 bg-white dark:border-stone-700 dark:bg-[#1c1c1c] sm:h-[calc(100%-90px)]">
+        <div className="flex h-[50px] w-[100px] items-center border-b border-stone-300 dark:border-stone-700 md:w-[350px] md:px-5">
+          <h1 className="messagenamedesign mx-auto">{userDetails.displayName}</h1>
           <button
           aria-label='button'
             onClick={() => setCreateChatRoom(!createChatRoom)}
@@ -59,7 +59,7 @@ const Inbox: NextPage = () => {
         ) : (
           <div />
         )}
-        <div className="h-[calc(100%-60px)] w-[130px] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]">
+        <div className=" h-[calc(100%-60px)] w-[100px] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]">
           <div
             className={chatRoomLoading ? 'fixed opacity-0' : ''}
           >

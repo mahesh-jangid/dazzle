@@ -37,11 +37,11 @@ function ChatRoom({ chatRoomID, userID, activeChat, activeChatId }: Props) {
   useHandleEmojiPopUp({ setDisplayEmojiSelector });
 
   return (
-    <div className="dark:text-slate-100">
+    <div className="dark:text-slate-">
       <div
         className={`${
           activeChat === activeChatId ? 'flex' : 'hidden'
-        } absolute left-[130px] top-0 h-[60px] cursor-default items-center gap-2 border-l border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
+        } absolute left-[100px] top-0 h-[50px] cursor-default items-center gap-2 border-l border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
       >
         {avatarURL === '' || !avatarURL ? (
           <div className="h-7 w-7">
@@ -59,7 +59,7 @@ function ChatRoom({ chatRoomID, userID, activeChat, activeChatId }: Props) {
           <Link href={`/${chatName}`}>
             <a>
               <Image
-                className="h-7 w-7 cursor-pointer select-none rounded-full object-cover"
+                className="usertalkphoto h-8 w-8  cursor-pointer select-none rounded-full object-cover"
                 src={avatarURL}
                 alt="avatar"
                 width="28"
@@ -70,7 +70,7 @@ function ChatRoom({ chatRoomID, userID, activeChat, activeChatId }: Props) {
         )}
         <Link href={`/${chatName}`}>
           <a>
-            <h1 className="cursor-pointer">{chatName}</h1>
+            <h1 className="usertotalkdesign cursor-pointer">{chatName}</h1>
           </a>
         </Link>
       </div>
@@ -105,7 +105,7 @@ function ChatRoom({ chatRoomID, userID, activeChat, activeChatId }: Props) {
         )}
       </div>
       {activeChat === activeChatId ? (
-        <div className="absolute bottom-0 top-[59px] left-[130px] flex w-[calc(100%-130px)] cursor-default flex-col justify-end border-l border-t  border-stone-300 dark:border-stone-700 md:left-[350px] md:w-[calc(100%-350px)]">
+        <div className=" absolute bottom-0 top-[50px] left-[100px] flex w-[calc(100%-130px)] cursor-default flex-col justify-end border-l border-t  border-stone-300 dark:border-stone-700 md:left-[350px] md:w-[calc(100%-350px)]">
           <div className="flex cursor-default flex-col-reverse gap-5 overflow-y-auto px-1 py-2 dark:[color-scheme:dark] md:px-5">
             {messages.map((message, index) => (
               <div

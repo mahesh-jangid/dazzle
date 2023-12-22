@@ -31,7 +31,7 @@ function AddStory() {
           >
             {userDetails.photoURL ? (
               <Image
-                className="relative z-10 h-14 w-14 select-none rounded-[7px]  bg-[#ebebeb] object-cover p-[2px] dark:bg-[#1c1c1c]"
+                className="relative z-10 h-14 w-14 select-none rounded-[10px]  bg-[#ebebeb] object-cover p-[2px] dark:bg-[#1c1c1c]"
                 src={userDetails.photoURL}
                 alt="avatar"
 
@@ -55,13 +55,13 @@ function AddStory() {
               userNotifications?.story?.length === 0
                 ? 'bg-[#e4e4e4] dark:bg-[#000000]'
                 : 'bg-gradient-to-tr from-[#000] to-[#35e6d4]'
-            } absolute top-[-2px] left-[-2px]  z-0 h-[60px] w-[60px] rounded-[3px] `}
+            } absolute top-[-2px] left-[-2px]  z-0 h-[60px] w-[60px] rounded-[50px] `}
           />
           <div className="absolute bottom-0 right-[15px] z-10">
             <AddStorySVG />
           </div>
         </div>
-        <div className="relative mt-2 max-w-[74px] overflow-hidden text-xs">
+        <div className="relative mt-0 max-w-[74px] overflow-hidden text-xs">
           <p ref={widthRef}>{userDetails.displayName}</p>
           {checkLength.nameWidth === 74 ? (
             <div className="absolute top-0 right-0 bg-white pr-[5px] dark:bg-[#1c1c1c]">

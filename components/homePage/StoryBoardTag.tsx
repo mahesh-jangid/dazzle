@@ -49,7 +49,7 @@ function StoryBoardTag({ username }: { username: string }) {
             </div>
           ) : (
             <Image
-              className="relative z-10 h-14 w-14 select-none rounded-[10px]  bg-[#ebebeb] object-cover p-[2px] dark:bg-[#1c1c1c]"
+              className="relative z-10 h-14 w-14 select-none rounded-full  bg-[#ebebeb] object-cover p-[3px] dark:bg-[#1c1c1c]"
               src={stories[`${username}Photo`]}
               alt="avatar"
               width="56"
@@ -61,8 +61,8 @@ function StoryBoardTag({ username }: { username: string }) {
           className={`${
             didView
               ? 'bg-[#e4e4e4] dark:bg-[#4d4d4d]'
-              : 'bg-gradient-to-tr from-[#000] to-[#07f5e5]'
-          } absolute top-[-2px] left-[-2px] z-0 h-[60px] w-[60px] rounded-[5px] group-hover:animate-ping`}
+              : 'bg-gradient-to-tr from-[#f5e107] to-[#f5078a]'
+          } absolute top-[-2px] left-[-2px] z-0 h-[60px] w-[60px] rounded-full group-hover:animate-ping`}
         />
       </button>
       <div className="relative mt-2 max-w-[74px] overflow-hidden text-xs">
