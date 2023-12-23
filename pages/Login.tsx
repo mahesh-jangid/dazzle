@@ -36,9 +36,9 @@ const Login: NextPage = () => {
         <meta name="description" content="Instagram Clone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
-      <div >
+      <div className="loginone flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
         <div>
-          <div className="relative hidden h-[590px] overflow-hidden lg:block">
+          <div className=" relative hidden h-[590px] overflow-hidden lg:block">
             <Image
               priority
               src="/loginFrame.png"
@@ -94,12 +94,11 @@ const Login: NextPage = () => {
           </div>
         </div>
         <div>
-         <div className='logu'>
-         <div className="flex max-w-[100%px] flex-col items-center justify-center border border-stone-300 bg-white">
-            <div className="h-auto w-[430px] py-10">
+          <div className=" flex max-w-[800px] flex-col items-center gap-9 justify-center border border-stone-300 bg-white">
+            <div className="h-auto w-[175px] py-10">
               <InstagramSVG />
             </div>
-            <div className="w-full px-5 sm:px-10">
+            <div className="loginthree w-full px-5 sm:px-10">
               <form
                 action=""
                 className="signInPageFormContainer"
@@ -120,7 +119,7 @@ const Login: NextPage = () => {
                 <label htmlFor="signInPageEmail">
                   {' '}
                   <input
-                    className=" w-full border border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
+                    className="  loginfour      w-full border border-stone-300 bg-[#fafafa] px-2 py-[22px] text-[44px] focus:outline-none"
                     type="email"
                     id="signInPageEmail"
                     value={email}
@@ -128,13 +127,13 @@ const Login: NextPage = () => {
                     placeholder="Email address"
                   />
                 </label>
-                <p className="h-[20px] max-w-[220px] pb-2 text-[10px] text-red-600">
+                <p className=" h-[22px] max-w-[220px] pb-2 text-[44px] text-red-600">
                   {emailFormErrors}
                 </p>
                 <label htmlFor="signInPagePassword">
                   {' '}
                   <input
-                    className="w-full border border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
+                    className="loginfive w-full border border-stone-300 bg-[#fafafa] px-2 py-[22px] text-[44px] focus:outline-none"
                     type="password"
                     id="signInPagePassword"
                     value={password}
@@ -142,7 +141,7 @@ const Login: NextPage = () => {
                     placeholder="Password"
                   />
                 </label>
-                <p className="h-[20px] max-w-[220px] text-[10px] text-red-600">
+                <p className="h-[100px] max-w-[220px] text-[22px] text-red-600">
                   {passwordFormErrors}
                 </p>
                 <button
@@ -150,20 +149,20 @@ const Login: NextPage = () => {
                     emailFormErrors === '' && passwordFormErrors === ''
                       ? 'bg-[#02e0ce]'
                       : 'pointer-events-none cursor-default bg-[#7df5eb]'
-                  } my-5 w-full rounded-[4px]  px-2 py-1 text-sm font-semibold text-white`}
+                  } my-9 w-full rounded-[4px]  px-2 py-1 text-[44px] font-semibold text-white`}
                   type="submit"
                 >
                   Log In
                 </button>
-                <div className="mb-5 flex h-0 items-center justify-center">
+                <div className="mb-5 flex h-25 items-center justify-center">
                   <div className="w-full border-b border-stone-300" />
-                  <p className="mx-2 text-sm font-semibold text-[#6d6d6d]">
+                  <p className="mx-2 text-[40px] font-semibold text-[#6d6d6d]">
                     OR
                   </p>
                   <div className="w-full border-b border-stone-300" />
                 </div>
                 <button
-                  className="mb-10 w-full rounded-[4px] bg-[#02e0ce] px-2 py-1 text-sm font-semibold text-white"
+                  className="mb-10 w-full rounded-[4px] bg-[#02e0ce] px-2 py-1 text-[44px] font-semibold text-white"
                   type="button"
                   onClick={(e: any) =>
                     handleSignIn({
@@ -184,7 +183,7 @@ const Login: NextPage = () => {
               </form>
             </div>
           </div>
-          <div className="mt-2 flex max-w-[360px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
+          <div className="mt-2 flex max-w-[3000px] justify-center border border-stone-300 bg-white py-5 text-[44px]">
             <p>Do not have an account?</p>
             <button
               className="ml-1 font-semibold text-[#faa70c]"
@@ -194,7 +193,6 @@ const Login: NextPage = () => {
               Sign up
             </button>
           </div>
-         </div>
         </div>
       </div>
     </div>

@@ -66,6 +66,62 @@ margin-left: 2px;
 font-size: 19px;
 }
 
+.loginone{
+  width: 800px;
+
+}
+
+
+.logintwo{
+  width: 7000px;
+  height: 1100px;
+  
+}
+.loginthree{
+  width: 700px;
+  margin-top: 100px;
+}
+
+.loginfour{
+  border-radius: 20px;
+ 
+}
+
+.loginfive{
+  border-radius: 20px;
+}
+
+
+
+.signupone{
+  
+width: 800px;
+}
+.signouttwo{
+  width: 7000px;
+  height: 1100px;
+  gap: 60px;
+}
+
+.signoutfive{
+  border-radius: 20px;
+}
+.signoutsix{
+  border-radius: 20px;
+}
+.signoutseven{
+  border-radius: 20px;
+}
+
+
+
+
+.dazzlonename{
+  font-size: 50px;
+  font-family: sans-serif-condensed; font-weight: bold;
+}
+
+
 
 
 
