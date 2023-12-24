@@ -127,7 +127,7 @@ const Login: NextPage = () => {
                     placeholder="Email address"
                   />
                 </label>
-                <p className=" h-[22px] max-w-[220px] pb-2 text-[44px] text-red-600">
+                <p className=" h-[66px] max-w-[700px] pb-1 text-[22px] text-red-600">
                   {emailFormErrors}
                 </p>
                 <label htmlFor="signInPagePassword">
@@ -141,7 +141,7 @@ const Login: NextPage = () => {
                     placeholder="Password"
                   />
                 </label>
-                <p className="h-[100px] max-w-[220px] text-[22px] text-red-600">
+                <p className="h-[100px] max-w-[600px] text-[22px] text-red-600">
                   {passwordFormErrors}
                 </p>
                 <button
