@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-array-index-key */
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAtom } from 'jotai';
 import { NextPage } from 'next';
 import ChatRoom from '../components/InboxPage/ChatRoom';
@@ -21,6 +21,7 @@ const Inbox: NextPage = () => {
   const [chatRoomLoading, setChatRoomLoading] = useAtom(atoms.chatRoomLoading);
 
   const [activeChat, setActiveChat] = React.useState('');
+  const [move,setmove]= useState(false)
   const [createChatRoom, setCreateChatRoom] = React.useState(false);
   useEffect(() => {
     // This code will be executed when the component has mounted
@@ -44,22 +45,22 @@ const Inbox: NextPage = () => {
         <div />
       )}
       <div className="messagebordedesign relative mx-auto mt-0 h-[calc(100%-140px)] max-w-[100%] border border-stone-300 bg-white dark:border-stone-700 dark:bg-[#1c1c1c] sm:h-[calc(100%-90px)]">
-        <div className="flex h-[50px] w-[100px] items-center border-b border-stone-300 dark:border-stone-700 md:w-[350px] md:px-5">
-          <h1 className="messagenamedesign mx-auto">{userDetails.displayName}</h1>
-          <button
+        <div className="flex h-[50px] w-[100px] items-center border-b border-stone-200 dark:border-stone-700 md:w-[350px] md:px-5">
+          {/* <button
           aria-label='button'
             onClick={() => setCreateChatRoom(!createChatRoom)}
             type="button"
           >
             <NewMessageSVG />
-          </button>
+          </button> */}
         </div>
         {activeChat === '' ? (
-          <SendMessage setCreateChatRoom={setCreateChatRoom} />
+          <SendMessage move={move} setCreateChatRoom={setCreateChatRoom} />
         ) : (
           <div />
         )}
-        <div className=" h-[calc(100%-60px)] w-[100px] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]">
+        <div className={`${ move ? `w-[0px]`: `w-[100px]`
+        } h-[calc(100%-60px)] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]`}>
           <div
             className={chatRoomLoading ? 'fixed opacity-0' : ''}
           >
@@ -81,6 +82,7 @@ const Inbox: NextPage = () => {
                   chatRoomID={chatRoomId}
                   userID={userDetails.displayName!}
                   activeChat={activeChat}
+                  move={move}
                   activeChatId={`chatRoom${index}`}
                 />
               </div>
@@ -91,7 +93,10 @@ const Inbox: NextPage = () => {
           ) : (
             ''
           )}
+
         </div>
+        <button id='chatbottonn' className={`${move ? "moving":""} activee`} onClick={()=>setmove(!move)}>⟪ ⟫</button>
+
       </div>
     </div>
   );

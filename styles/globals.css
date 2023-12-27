@@ -8,6 +8,29 @@ body {
   margin: 0;
 }
 
+.activee{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+.activee.moving {
+  left: 2%;
+  
+
+}
+
+
+
+
+#chatbottonn{
+  color: red;
+}
+
+
+
+
+
+
 
 
 .scrollbar {
@@ -20,7 +43,10 @@ body {
   scrollbar-color: #4d4d4d rgba(255, 255, 255, 0);
 }
 
-
+#sendMessage{
+  margin-right: 6px;
+  font-size: 15px;
+}
 
 .searchdesign{
   border: 1px solid rgb(0, 0, 0);
