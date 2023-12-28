@@ -59,7 +59,7 @@ const Inbox: NextPage = () => {
           <div />
         )}
        <div className={`${move ? 'w-[0px]' : 'w-[100px]'} h-[calc(100%-60px)] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]`}>
-  <div className={chatRoomLoading ? "fixed opacity-0" : ''}>
+  <div className={chatRoomLoading ? 'fixed opacity-0' : ''}>
     {userNotifications?.chatRoomIds?.map((chatRoomId, index) => (
       <div
         key={`chatRoomKey${index}`}
@@ -91,7 +91,7 @@ const Inbox: NextPage = () => {
   )}
 </div>
 
-        <button type='button' id='chatbottonn' className={`${move ? "moving":""} activee`} onClick={()=>setmove(!move)}>⟪ ⟫</button>
+        <button type='button' id='chatbottonn' className={`${move ? 'moving':''} activee`} onClick={()=>setmove(!move)}>⟪ ⟫</button>
 
       </div>
     </div>
