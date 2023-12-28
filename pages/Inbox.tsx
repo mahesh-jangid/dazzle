@@ -8,7 +8,6 @@ import ChatRoom from '../components/InboxPage/ChatRoom';
 import CreateChatRoom from '../components/InboxPage/CreateChatRoom';
 import SendMessage from '../components/InboxPage/SendMessage';
 import LoadingPage from '../components/loadingComps/LoadingPage';
-import NewMessageSVG from '../components/svgComps/NewMessageSVG';
 import Header from '../components/header/Header';
 import atoms from '../util/atoms';
 import LoadingChatRooms from '../components/loadingComps/LoadingChatRooms';
@@ -59,10 +58,10 @@ const Inbox: NextPage = () => {
         ) : (
           <div />
         )}
-        <div className={`${ move ? `w-[0px]`: `w-[100px]`
+        <div className={`${ move ? "w-[0px]": "w-[100px]"
         } h-[calc(100%-60px)] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]`}>
           <div
-            className={chatRoomLoading ? 'fixed opacity-0' : ''}
+            className={chatRoomLoading ? "fixed opacity-0" : ''}
           >
             {userNotifications?.chatRoomIds?.map((chatRoomId, index) => (
               <div
@@ -95,7 +94,7 @@ const Inbox: NextPage = () => {
           )}
 
         </div>
-        <button id='chatbottonn' className={`${move ? "moving":""} activee`} onClick={()=>setmove(!move)}>⟪ ⟫</button>
+        <button type='button' id='chatbottonn' className={`${move ? "moving":""} activee`} onClick={()=>setmove(!move)}>⟪ ⟫</button>
 
       </div>
     </div>
