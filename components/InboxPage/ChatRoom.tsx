@@ -41,7 +41,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
     <div className="dark:text-slate-">
       <div
         className={`${ activeChat === activeChatId ? 'flex' : 'hidden'
-        } absolute ${ move ? `left-[0px]`: `left-[100px]`} top-0 h-[50px] cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
+        } absolute ${ move ? `left-[0px]`: `left-[100px]`} top-0 'h-[50px]' cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 'md:left-[350px]' md:gap-4 md:pl-10`}
       >
         {avatarURL === '' || !avatarURL ? (
           <div className='h-7 w-7'>
@@ -49,7 +49,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
             <picture>
               <img
                 // unfortuanetly this image is needed to force map loading state to be triggered
-                className="h-0 w-0 opacity-0"
+                className='h-0 w-0 opacity-0'
                 src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
                 alt="avatar"
               />
@@ -59,7 +59,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
           <Link href={`/${chatName}`}>
             <a>
               <Image
-                className="usertalkphoto h-8 w-8  cursor-pointer select-none rounded-full object-cover"
+                className='usertalkphoto h-8 w-8  cursor-pointer select-none rounded-full object-cover'
                 src={avatarURL}
                 alt="avatar"
                 width="28"
