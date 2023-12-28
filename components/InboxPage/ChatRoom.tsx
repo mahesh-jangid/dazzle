@@ -50,7 +50,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
               <img
                 // unfortuanetly this image is needed to force map loading state to be triggered
                 className='h-0 w-0 opacity-0'
-                src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
+                src='https://imagizer.imageshack.com/img922/3706/Q1vJOp.png'
                 alt="avatar"
               />
             </picture>
@@ -70,7 +70,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
         )}
         <Link href={`/${chatName}`}>
           <a>
-            <h1 className="usertotalkdesign cursor-pointer">{chatName}</h1>
+            <h1 className='usertotalkdesign cursor-pointer'>{chatName}</h1>
           </a>
         </Link>
       </div>
@@ -81,14 +81,14 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
             : 'hover:bg-[#f8f8f8] dark:hover:bg-[#131313]'
         } md: flex w-full items-center px-1 py-2 md:px-5`}
       >
-        <div className="mr-2 flex  items-center justify-center md:h-14 md:w-14">
+        <div className='mr-2 flex  items-center justify-center md:h-14 md:w-14'>
           {avatarURL === '' || !avatarURL ? (
-            <div className="h-6 w-6 rounded-full md:h-14 md:w-14">
+            <div className='h-6 w-6 rounded-full md:h-14 md:w-14'>
               <ProfilePicSVG strokeWidth="1" />
             </div>
           ) : (
             <Image
-              className="h-6 w-6 select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#313131] md:h-14 md:w-14"
+              className='h-6 w-6 select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#313131] md:h-14 md:w-14'
               src={avatarURL}
               alt="avatar"
               width="56"
@@ -99,7 +99,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
         </div>
         <h1 className="text-xs md:text-base">{chatName}</h1>
         {newMessage ? (
-          <div className="ml-auto h-2 w-2 rounded-full bg-[#0095f6]" />
+          <div className='ml-auto h-2 w-2 rounded-full bg-[#0095f6]' />
         ) : (
           ''
         )}
@@ -131,7 +131,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
               </div>
             ))}
           </div>
-          <div className="relative mx-1 mt-3 mb-1 flex justify-between rounded-full border border-stone-200 dark:border-stone-700 dark:bg-[#131313] md:mx-5">
+          <div className='relative mx-1 mt-3 mb-1 flex justify-between rounded-full border border-stone-200 dark:border-stone-700 dark:bg-[#131313] md:mx-5'>
             <button
               className="px-2 md:px-5"
               type="button"
@@ -156,7 +156,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
               </div>
             </button>
             <TextareaAutosize
-              className="my-3 w-[80%] resize-none text-sm focus:outline-none dark:bg-[#131313]"
+              className='my-3 w-[80%] resize-none text-sm focus:outline-none dark:bg-[#131313]'
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               placeholder="Message..."
