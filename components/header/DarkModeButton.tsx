@@ -25,6 +25,7 @@ function DarkModeButton() {
 
     setDarkMode(!darkMode);
   }
+
   return (
     <button
       className="fixed bottom-30 right-0 p-4"
