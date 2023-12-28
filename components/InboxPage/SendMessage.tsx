@@ -11,7 +11,7 @@ function SendMessage({
 }) {
   const [darkMode] = useAtom(atoms.darkMode);
   return (
-    <div className={`absolute bottom-0 top-0 ${move ? `left-[0px]`:`left-[130px]`} flex ${move ? `w-[calc(100%-3px)]`:`w-[calc(100%-130px)]`} flex-col items-center justify-center  border-stone-200 bg-white p-6 dark:border-stone--700 dark:bg-[#1c1c1c] md:left-[350px] md:w-[calc(100%-350px)]`}>
+    <div className={`absolute bottom-0 top-0' ${move ? `left-[0px]`:`left-[130px]`} flex ' ${move ? `w-[calc(100%-3px)]`:`w-[calc(100%-130px)]`} flex-col items-center justify-center  border-stone-200 bg-white p-6 dark:border-stone--700 dark:bg-[#1c1c1c] md:left-[350px] md:w-[calc(100%-350px)]`}>
      <svg
   aria-label="Add Friend"
   color={darkMode ? '#f1f5f9' : '#262626'}
