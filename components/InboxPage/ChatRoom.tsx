@@ -42,7 +42,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
       <div
         className={`${
           activeChat === activeChatId ? 'flex' : 'hidden'
-        } absolute '${ move ? `left-[0px]`: `left-[100px]`} top-0 h-[50px] cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
+        } absolute {'${ move ? `left-[0px]`: `left-[100px]`} top-0 h-[50px] cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
       >
         {avatarURL === '' || !avatarURL ? (
           <div className="h-7 w-7">
