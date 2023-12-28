@@ -16,11 +16,11 @@ interface Props {
   chatRoomID: string;
   userID: string;
   activeChat: string;
-  move:Boolean;
+  move: boolean;
   activeChatId: string;
 }
 
-function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) {
+function ChatRoom({ chatRoomID, move, userID, activeChat, activeChatId }: Props) {
   const [darkMode] = useAtom(atoms.darkMode);
   const [allChatRoomMessages] = useAtom(atoms.allChatRoomMessages);
 
@@ -42,14 +42,13 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
       <div
         className={`${
           activeChat === activeChatId ? 'flex' : 'hidden'
-        } absolute ${ move ? `left-[0px]`: `left-[100px]`} top-0 h-[50px] cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
+        } absolute ${move ? 'left-[0px]' : 'left-[100px]'} top-0 h-[50px] cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
       >
         {avatarURL === '' || !avatarURL ? (
           <div className="h-7 w-7">
             <ProfilePicSVG strokeWidth="1.5" />
             <picture>
               <img
-                // unfortuanetly this image is needed to force map loading state to be triggered
                 className="h-0 w-0 opacity-0"
                 src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
                 alt="avatar"
@@ -60,7 +59,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
           <Link href={`/${chatName}`}>
             <a>
               <Image
-                className="usertalkphoto h-8 w-8  cursor-pointer select-none rounded-full object-cover"
+                className="usertalkphoto h-8 w-8 cursor-pointer select-none rounded-full object-cover"
                 src={avatarURL}
                 alt="avatar"
                 width="28"
@@ -106,7 +105,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
         )}
       </div>
       {activeChat === activeChatId ? (
-        <div className={`absolute bottom-0 ${ move ? `top-[5px]`: `top-[50px]`} ${ move ? `left-[0px]`: `left-[100px]`} flex ${move ? `w-[calc(100%-3px)]`:`w-[calc(100%-130px)]`} cursor-default flex-col justify-end border-l border-t  border-stone-300 dark:border-stone-700 md:left-[350px] md:w-[calc(100%-350px)]`}>
+        <div className={`absolute bottom-0' ${move ? 'top-[5px]' : 'top-[50px]'} ${move ? 'left-[0px]' : 'left-[100px]'} flex ${move ? 'w-[calc(100%-3px)]' : 'w-[calc(100%-130px)]'} cursor-default flex-col justify-end border-l border-t  border-stone-300 dark:border-stone-700 md:left-[350px] md:w-[calc(100%-350px)]`}>
           <div className="flex cursor-default flex-col-reverse gap-5 overflow-y-auto px-1 py-2 dark:[color-scheme:dark] md:px-5">
             {messages.map((message, index) => (
               <div
@@ -222,7 +221,7 @@ function ChatIcon({
   chatName: string;
 }) {
   return (
-    <div className="mt-auto h-7 w-7 md:mr-2">
+    <div className='mt-auto h-7 w-7 md:mr-2'>
       {photoURL === '' ? (
         <div className="h-6 w-6">
           <ProfilePicSVG strokeWidth="1.3" />
