@@ -62,7 +62,7 @@ export default function FollowingFollowerDropDown({
                 <div className="flex items-center" key={userDetails.username}>
                   <Link href={`/${userDetails.username}`}>
                     <a>
-                      {userDetails.avatarURL.length !== 0 ? (
+                      {userDetails?.avatarURL?.length !== 0 ? (
                         <Image
                           className="h-11 w-11 cursor-pointer select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#313131]"
                           src={userDetails.avatarURL}

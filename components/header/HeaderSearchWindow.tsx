@@ -3,6 +3,7 @@ import Image from 'next/future/image';
 import { notificationTypes } from '../../util/atoms';
 import ProfilePicSVG from '../svgComps/ProfilePicSVG';
 import SpinnerSVG from '../svgComps/SpinnerSVG';
+import VerificationBadge from '../VerificationBadge'; // Import the VerificationBadge component
 
 function HeaderSearchWindow({
   loading,
@@ -49,7 +50,11 @@ function HeaderSearchWindow({
                         <ProfilePicSVG strokeWidth="1" />
                       </div>
                     )}
+                    {/* Add the VerificationBadge component here */}
                     <p className="ml-5">{details.username}</p>
+                    <div className='seachbluetick'> {details.isVerified && <VerificationBadge />}</div>
+                
+
                   </div>
                 </Link>
               ))

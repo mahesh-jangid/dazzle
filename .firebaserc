@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "dazzle-8ca62"
-  }
+    "default": "dazzle-8ca62",
+    "dev": "dazzle-b7f71"
+  },
+  "targets": {},
+  "etags": {}
 }

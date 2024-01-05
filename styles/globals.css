@@ -26,6 +26,45 @@ body {
   color: red;
 }
 
+.seachbluetick{
+   margin-top: 8px;
+}
+
+.hbt{
+ display: flex;
+ margin-top: 2px;
+}
+
+.usbt{
+  display: flex;
+}
+.usbhw{
+  margin-top: 2px;
+font-size: 15px;
+
+}
+
+.usb{
+height: 20px;
+margin-bottom: 3px;
+}
+
+.gurudevtick{
+  margin-top: 3px;
+  height: 10px;
+  width: 10px;
+}
+
+
+
+.searchd{
+  background: linear-gradient(to top right, #210661, #0e9271);
+}
+
+
+
+
+
 
 
 
@@ -48,9 +87,8 @@ body {
   font-size: 15px;
 }
 
-.searchdesign{
-  border: 1px solid rgb(0, 0, 0);
-}
+
+
 
 .profilephotodesign{
   border: 3px solid rgb(255, 255, 255);
@@ -201,7 +239,7 @@ main {
 main .topper {
   width: 100%;
   height: 50px;
-  background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background: linear-gradient(15deg, #024a74 0%, #08081e 100%);
   padding: 10px;
   position: sticky;
   z-index: 1;
@@ -216,7 +254,7 @@ main .topper .icon {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: #11ba91 url('https://cdn4.vectorstock.com/i/thumb-large/61/53/dronacharya-cartoon-character-vector-38356153.jpg');
+  background: #0e0b43 url('https://cdn4.vectorstock.com/i/thumb-large/61/53/dronacharya-cartoon-character-vector-38356153.jpg');
   background-size: cover;
   margin-left: 15px;
 }
@@ -289,7 +327,7 @@ main .bottom #input button {
 
 main .bottom #input button:active {
   transform: scale(0.96);
-  background: #13d2a3;
+  background: #0b1667;
   opacity: 0.4;
 }
 
@@ -313,7 +351,7 @@ main .msgs_cont li {
   padding: 10px;
   max-width: 70%;
   margin: 10px 0;
-  background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background: linear-gradient(15deg, #13547a 0%, #1d0e42 100%);
   color: #fff;
   list-style-type: none;
   border-radius: 10px;
@@ -334,7 +372,7 @@ main .msgs_cont .rchat {
   float: left;
   clear: both;
   margin-bottom: 5px;
-  background: linear-gradient(to top right, #11ba91, #0a6e55);
+  background: linear-gradient(to top right, #210661, #0e9271);
   padding-left: 12px;
   border-bottom-left-radius: 20px;
 }

@@ -13,6 +13,7 @@ export interface chatRoomMessagesTypes {
 export interface userDetailTypes {
   displayName?: string;
   photoURL?: string;
+  isVerified?: boolean;
 }
 
 export interface heartDetails {
@@ -42,6 +43,7 @@ export interface notificationTypes {
   username?: string;
   usernameQuery?: string[];
   newHeart?: boolean;
+  isVerified?: boolean;
   heartNotifications?: heartDetails[];
 }
 

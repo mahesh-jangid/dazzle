@@ -5,6 +5,7 @@ import Link from 'next/link';
 import atoms from '../../util/atoms';
 import LoadingSuggestions from '../loadingComps/LoadingSuggestions';
 import ProfilePicSVG from '../svgComps/ProfilePicSVG';
+import VerificationBadge from '../VerificationBadge'; // Import the VerificationBadge component
 
 function UserSuggestions() {
   const [userDetails] = useAtom(atoms.userDetails);
@@ -12,10 +13,12 @@ function UserSuggestions() {
   const [suggestionsLoading, setSuggestionsLoading] = useAtom(
     atoms.suggestionsLoading
   );
+
   useEffect(() => {
     // This code will be executed when the component has mounted
     setSuggestionsLoading(false);
   }, []);
+
   return (
     <div className="mt-6 hidden max-w-[320px] flex-grow lg:block">
       <div className="mt-5 flex items-center justify-between">
@@ -101,13 +104,21 @@ function UserSuggestions() {
                     </a>
                   </Link>
                 )}
+                {/* Add the VerificationBadge component here */}
+           
                 <div>
                   <Link href={`/${spotlightUserDetails?.username}`}>
+                    <span className='usbt'>
                     <a>
-                      <p className="cursor-pointer text-xs font-semibold">
+                      <p className="usbhw cursor-pointer text-xs font-semibold">
                         {spotlightUserDetails?.username}
+                      
+                       
                       </p>
                     </a>
+                    <div className='usb'> {spotlightUserDetails?.isVerified && <VerificationBadge />}</div>
+                    </span>
+                 
                   </Link>
                   <p className="text-xs text-[#818181]">
                     Followed by {spotlightUserDetails?.followers!.length}{' '}

@@ -10,6 +10,7 @@ import useExploreUsers from '../hooks/useExploreUsers';
 import Header from '../components/header/Header';
 import ProfilePicSVG from '../components/svgComps/ProfilePicSVG';
 import ArrowSVG from '../components/svgComps/ArrowSVG';
+import VerificationBadge from '../components/VerificationBadge'; 
 
 const Explore: NextPage = () => {
   const [userStatus] = useAtom(atoms.userStatus);
@@ -71,7 +72,7 @@ const Explore: NextPage = () => {
                 <Link href={userDocs.username!}>
                   <a>
                     <p className="cursor-pointer text-sm font-semibold">
-                      {userDocs.username}
+                      {userDocs.username} {userDocs.isVerified && <VerificationBadge />}
                     </p>
                   </a>
                 </Link>
@@ -106,7 +107,7 @@ const Explore: NextPage = () => {
         <div className="flex flex-col justify-center pt-5 font-semibold">
           <p className="mx-auto">Explore more users</p>
           <button
-          aria-label='button'
+            aria-label='button'
             className="group mx-auto px-8 pb-8 pt-4"
             type="button"
             onClick={() => setRequestMoreUsers(!requestMoreUsers)}

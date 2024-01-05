@@ -12,8 +12,11 @@ import atoms from '../util/atoms';
 import LoadingPosts from '../components/loadingComps/LoadingPosts';
 
 const Home: NextPage = () => {
+  const [userdetails] = useAtom(atoms.userDetails);
+console.log('uswe',userdetails)
   const [userStatus] = useAtom(atoms.userStatus);
   const [followingArray] = useAtom(atoms.followingArray);
+  console.log('jgjgh',followingArray)
   const [followingArrayStatus] = useAtom(atoms.followingArrayStatus);
   const [postsLoading, setPostsLoading] = useAtom(atoms.postsLoading);
   

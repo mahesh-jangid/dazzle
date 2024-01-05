@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/future/image';
 import { useAtom } from 'jotai';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import Link from 'next/link';
 import PostPopUp from '../PostPopUp';
 import HeartHollow from '../svgComps/HeartHollow';
@@ -13,6 +14,7 @@ import PostTextArea from '../PostTextArea';
 import atoms from '../../util/atoms';
 import ProfilePicSVG from '../svgComps/ProfilePicSVG';
 import NoPostsFiller from './NoPostsFiller';
+import VerificationBadge from '../VerificationBadge';
 
 interface Props {
   username: string;
@@ -20,6 +22,40 @@ interface Props {
 }
 
 const HomePagePost = ({ username, index }: Props) => {
+  const [isUserVerified, setIsUserVerified] = useState(false);
+// console.log("vvv",firestore)
+useEffect(() => {
+  const fetchUserData = async () => {
+    try {
+
+      // Ensure that username is defined and is a string
+      if (typeof username === 'string') {
+        // Use getFirestore to get Firestore instance
+        const db = getFirestore();
+
+        // Construct the user document reference
+        const userDocRef = doc(db, 'users', username);
+        console.log('nnn',userDocRef)
+
+        // Retrieve the user document snapshot
+        const userDocSnap = await getDoc(userDocRef);
+        console.log('dd',userDocSnap)
+
+        if (userDocSnap.exists()) {
+          const userData = userDocSnap.data();
+          console.log('data',userData)
+
+          setIsUserVerified(userData.isVerified || false);
+          localStorage.setItem('isverified',JSON.stringify(isUserVerified))
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching user data', error);
+    }
+  };
+
+  fetchUserData();
+},[username]);
   const [darkMode] = useAtom(atoms.darkMode);
   const [userDetails] = useAtom(atoms.userDetails);
   const [homePagePosts] = useAtom(atoms.homePagePosts);
@@ -66,11 +102,19 @@ const HomePagePost = ({ username, index }: Props) => {
               </a>
             </Link>
             <Link href={username}>
+              <span className='hbt'>
               <a>
                 <p className="ml-4 cursor-pointer">
                   {postDetails.comments[0].username}
+                 
+                
                 </p>
+                
+               
               </a>
+              <div className='hbt'>  {isUserVerified && <VerificationBadge />}</div>
+              </span>
+              
             </Link>
           </div>
           <div

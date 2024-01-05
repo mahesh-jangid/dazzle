@@ -53,7 +53,7 @@ function ViewAllStories({
           document.body.style.overflow = 'initial';
         }}
       >
-        <div className="h-auto w-[103px]">
+        <div className="h-auto w-[104px]">
           <InstagramSVG  />
         </div>
       </button>

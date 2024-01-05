@@ -38,7 +38,7 @@ function GurudevSVGIcon({ page }: { page: string }) {
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path d="M4 18l-1.41-1.41L9.17 12 2.59 5.41 4 4l7 7-7 7z" />
             </svg>
-            <span style={{ marginLeft: '2px', fontSize: '11px' }}>Hi!</span>
+            <span style={{ marginLeft: '2px', fontSize: '10px' }}>Hi!</span>
           </div>
         )}
       </div>
@@ -78,7 +78,7 @@ function GurudevSVGIcon({ page }: { page: string }) {
           `}
         </style>
         {/* Magic Lamp */}
-        <path fill="#07b8ac" d="M12 4c1.7 0 3 1.3 3 3 0 .6-.2 1.3-.6 1.8L18 15v4h-1c-1.1 0-2 .9-2 2H9c0-1.1-.9-2-2-2H6v-4l3-6.2c-.4-.5-.6-1.2-.6-1.8 0-1.7 1.3-3 3-3z" />
+        <path  fill="#065180" d="M12 4c1.7 0 3 1.3 3 3 0 .6-.2 1.3-.6 1.8L18 15v4h-1c-1.1 0-2 .9-2 2H9c0-1.1-.9-2-2-2H6v-4l3-6.2c-.4-.5-.6-1.2-.6-1.8 0-1.7 1.3-3 3-3z" />
         {/* Lamp Handle */}
         <path fill="#795548" d="M11 2v4h2V2h-2z" />
       </svg>

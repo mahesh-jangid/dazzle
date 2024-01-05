@@ -65,7 +65,7 @@ function Header({ page }: { page: string }) {
         </div>
         <div className="relative  sm:flex">
           <input
-            className=" searchdesign w-[130px] rounded-lg bg-[#ccfcfa] py-[6px] pl-[45px] focus:outline-0 dark:bg-[#77f7dc]  lg:w-[275px]"
+            className="searchd searchdesign w-[130px] rounded-lg bg-[#ccfcfa] py-[6px] pl-[45px] focus:outline-0 dark:bg-[#77f7dc]  lg:w-[275px]"
             type="text"
             placeholder="Search"
             value={nameSearch}
@@ -99,8 +99,8 @@ function Header({ page }: { page: string }) {
               <div className="relative">
                 <IndexSVG page={page} />
                 {newMessage ? (
-                  <div className="absolute top-[-6px] right-[-8px] flex h-[18px] w-[18px] items-center justify-center rounded-full bg-[#ff3041]">
-                    <p className="text-center text-white">!</p>
+                  <div className="absolute top-[-6px] right-[-8px] flex h-[18px] w-[18px] items-center justify-center rounded-full bg-[#2da69c]">
+                    <p className="text-center text-white">◉</p>
                   </div>
                 ) : (
                   ''

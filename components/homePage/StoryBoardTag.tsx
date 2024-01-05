@@ -7,7 +7,7 @@ import ViewAllStories from './ViewAllStories';
 import useWindowSize from '../../hooks/useWindowSize';
 import ProfilePicSVG from '../svgComps/ProfilePicSVG';
 
-function StoryBoardTag({ username }: { username: string }) {
+function StoryBoardTag({ username}: { username: string }) {
   const [stories] = useAtom(atoms.stories);
   const [userDetails] = useAtom(atoms.userDetails);
 

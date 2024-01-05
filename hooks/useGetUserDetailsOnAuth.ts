@@ -12,7 +12,7 @@ import {
 } from 'firebase/firestore';
 import { useAtom } from 'jotai';
 import React from 'react';
-import app from '../util/firbaseConfig';
+import app from '../util/firebaseConfig';
 import atoms, {
   notificationTypes,
   chatRoomMessagesTypes,
